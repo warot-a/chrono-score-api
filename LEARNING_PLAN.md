@@ -5,7 +5,7 @@ ORM: TypeORM via `@nestjs/typeorm` — connected directly via connection string,
 
 ---
 
-## Phase 0 — NestJS CLI Basics (Dummy Data)
+## ✅ Phase 0 — NestJS CLI Basics (Dummy Data)
 
 Goal: Get familiar with the NestJS CLI and the Module → Service → Controller flow without a database
 
@@ -16,7 +16,7 @@ Goal: Get familiar with the NestJS CLI and the Module → Service → Controller
 
 ---
 
-## Phase 1 — Database Connection & First Module
+## ✅ Phase 1 — Database Connection & First Module
 
 Goal: Connect NestJS to Supabase PostgreSQL and build the first endpoint from real data
 

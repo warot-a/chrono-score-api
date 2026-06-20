@@ -1,17 +1,19 @@
 import { Injectable } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Sport } from './sports.entity';
+import { Repository } from 'typeorm';
 
 @Injectable()
 export class SportsService {
-  private readonly sports = [
-    { id: 1, name: 'Football', slug: 'football' },
-    { id: 2, name: 'Basketball', slug: 'basketball' },
-  ];
+  constructor(
+    @InjectRepository(Sport) private readonly repo: Repository<Sport>,
+  ) {}
 
   findAll() {
-    return this.sports;
+    return this.repo.find();
   }
 
   findOne(slug: string) {
-    return this.sports.find((s) => s.slug === slug) ?? null;
+    return this.repo.findOneBy({ slug });
   }
 }

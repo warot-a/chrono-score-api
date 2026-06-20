@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Important: How to Assist
 
-**Do not modify files or run CLI commands autonomously.** When asked to implement something, show the user the code snippets and commands to run, then let the user apply them. Only read and analyze files — never write, edit, or execute on the user's behalf unless explicitly asked.
+**Do not modify files or run CLI commands autonomously.** Except \*.md files, when asked to implement something, show the user the code snippets and commands to run, then let the user apply them. Only read and analyze files — never write, edit, or execute on the user's behalf unless explicitly asked.
 
 ## Stack
 
@@ -28,6 +28,7 @@ pnpm run format       # prettier format
 ```
 
 To run a single test file:
+
 ```bash
 pnpm run test -- --testPathPattern=app.controller
 ```
