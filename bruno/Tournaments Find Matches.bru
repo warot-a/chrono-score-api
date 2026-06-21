@@ -1,0 +1,15 @@
+meta {
+  name: Tournaments Find Matches
+  type: http
+  seq: 15
+}
+
+get {
+  url: {{baseUrl}}/tournaments/:slug/matches
+  body: none
+  auth: none
+}
+
+params:path {
+  slug: worldcup-2026
+}

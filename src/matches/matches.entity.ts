@@ -1,4 +1,13 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Team } from 'src/teams/teams.entity';
+import { Tournament } from 'src/tournaments/tournaments.entity';
+import { Venue } from 'src/venues/venues.entity';
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  ManyToOne,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 
 @Entity('matches')
 export class Match {
@@ -7,6 +16,10 @@ export class Match {
 
   @Column({ name: 'tournament_id' })
   tournamentId: number;
+
+  @ManyToOne(() => Tournament)
+  @JoinColumn({ name: 'tournament_id' })
+  tournament: Tournament;
 
   @Column({ name: 'external_id', nullable: true })
   externalId: string;
@@ -23,11 +36,23 @@ export class Match {
   @Column({ name: 'home_team_id', nullable: true })
   homeTeamId: number;
 
+  @ManyToOne(() => Team)
+  @JoinColumn({ name: 'home_team_id' })
+  homeTeam: Team;
+
   @Column({ name: 'away_team_id', nullable: true })
   awayTeamId: number;
 
+  @ManyToOne(() => Team)
+  @JoinColumn({ name: 'away_team_id' })
+  awayTeam: Team;
+
   @Column({ name: 'venue_id', nullable: true })
   venueId: number;
+
+  @ManyToOne(() => Venue)
+  @JoinColumn({ name: 'venue_id' })
+  venue: Venue;
 
   @Column({ name: 'scheduled_at', nullable: true, type: 'timestamptz' })
   scheduledAt: Date;
