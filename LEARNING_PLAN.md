@@ -36,7 +36,10 @@ Goal: Learn how to accept input from requests in various forms
 2. Create `VenuesModule` → `GET /venues`, `GET /venues/:id`
 3. Create `TournamentsModule` → `GET /tournaments`, `GET /tournaments/:slug`
 4. Add `GET /matches?status=&stage=&date=&group=` with filtering
-5. What you'll learn: `@Query()`, `@Param()`, DTO validation with `class-validator`
+5. Add `POST /sports` — create a new sport using a `CreateSportDto` (name, slug)
+6. Add `PUT /sports/:id` — update an existing sport using an `UpdateSportDto` (partial fields)
+7. Add `DELETE /sports/:id` — delete a sport by id, return 204 No Content
+8. What you'll learn: `@Query()`, `@Param()`, `@Body()`, DTO validation with `class-validator`, `PartialType` for partial updates, `Repository.save()` vs `Repository.update()`
 
 ---
 
