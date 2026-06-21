@@ -28,7 +28,7 @@ Goal: Connect NestJS to Supabase PostgreSQL and build the first endpoint from re
 
 ---
 
-## Phase 2 — Basic CRUD + Query Params
+## ✅ Phase 2 — Basic CRUD + Query Params
 
 Goal: Learn how to accept input from requests in various forms
 
