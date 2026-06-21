@@ -1,0 +1,15 @@
+meta {
+  name: Teams Find One
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/teams/:code
+  body: none
+  auth: none
+}
+
+params:path {
+  code: ESP
+}
