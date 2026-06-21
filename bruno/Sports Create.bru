@@ -1,0 +1,18 @@
+meta {
+  name: Sports Create
+  type: http
+  seq: 11
+}
+
+post {
+  url: {{baseUrl}}/sports/
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Badminton",
+    "slug": "badminton"
+  }
+}
