@@ -7,6 +7,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { TeamsModule } from './teams/teams.module';
 import { VenuesModule } from './venues/venues.module';
 import { TournamentsModule } from './tournaments/tournaments.module';
+import { MatchesModule } from './matches/matches.module';
 
 @Module({
   imports: [
@@ -24,6 +25,7 @@ import { TournamentsModule } from './tournaments/tournaments.module';
     TeamsModule,
     VenuesModule,
     TournamentsModule,
+    MatchesModule,
   ],
   controllers: [AppController],
   providers: [AppService],

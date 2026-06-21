@@ -1,0 +1,19 @@
+meta {
+  name: Matches Find All
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{baseUrl}}/matches?date=2025-06-15
+  body: none
+  auth: none
+}
+
+params:query {
+  date: 2025-06-15
+  ~status: SCHEDULED
+  ~?stage: GROUP
+  ~group: A
+}
+​
